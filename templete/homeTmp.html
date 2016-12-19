@@ -1,0 +1,87 @@
+<script type="text/html" id="homeTmp">
+	<%for(var i in data.act_info[1].act_rows){%>
+		<a href="#">
+			<span class="ico_1" style="background-image:url(<%=data.act_info[1].act_rows[i].activity.img%> );"></span>
+			<p><%=data.act_info[1].act_rows[i].activity.name%></p>
+		</a>
+	<%}%>
+</script>
+<script type="text/html" id="homeTmp1">
+	<%for (var c in data.act_info[5].act_rows){%>
+	<div class="column_item">
+			<div class="column">
+				<div class="column_header">
+					<span class="span_color" style="color:#<%=data.act_info[5].act_rows[c].category_detail.category_color%> ;border-color:#<%=data.act_info[5].act_rows[c].category_detail.category_color%>"><%=data.act_info[5].act_rows[c].category_detail.name%></span>
+					<a href="#" class="more">更多</a>
+				</div>
+				<div class="column_img">
+					<img src=<%=data.act_info[5].act_rows[c].activity.img%> />
+				</div>
+			</div>
+		<div class="good_list">
+	<%for(var a =0; a<data.act_info[5].act_rows[c].category_detail.goods.length;a++){%>
+				<div class="good_food" >
+					<span class="add_food"></span>
+						<div class="img_warp">
+							<img src=<%=data.act_info[5].act_rows[c].category_detail.goods[a].img%> />
+						</div>
+							<p class="food_name"><%=data.act_info[5].act_rows[c].category_detail.goods[a].name%></p>
+							<div class="biaoqian">
+								<span class="jx_food">精选</span>
+						</div>
+						<p class="foot_count"><%=data.act_info[5].act_rows[c].category_detail.goods[a].specifics%></p>
+					<p class="food_price">
+				<span class="price-yuan">¥</span> <%=data.act_info[5].act_rows[c].category_detail.goods[a].market_price%>
+				</p>
+			</div>
+	<%}%>
+			</div>
+		</div>
+	<%}%>
+</script>
+<script type="text/html" id="homeTmp2">
+	<%for(var b in data.act_info[0].act_rows){%>
+		<div class="swiper-slide"><img src=<%=data.act_info[0].act_rows[b].activity.img%>/></div>
+			<%}%>
+</script>
+<script type="text/html" id="homeTmp3">
+<div class="tuijian">
+	<%for(var d=0;d<3;d++){%>
+	<a href="#" style="background-image: url(<%=data.act_info[3].act_rows[d].activity.img%>);"></a>
+			<%}%>
+	
+</div>
+<div class="bld_main">
+	<div class="bld_header" style="background-image: url(<%=data.act_info[4].act_rows[0].act_rows[0].chead_detail.img%>);">
+
+	</div>
+	<ul class="bld_top">
+		<%for(var i=0; i<data.act_info[4].act_rows[1].act_rows.length;i++){%>
+		<a href="#" style="background-image: url(<%=data.act_info[4].act_rows[1].act_rows[i].cactivity_detail.img%>);">
+			<li></li>
+		</a>
+		<%}%>
+
+	</ul>
+	<ul class="bld_center">
+		<%for(var j=0; j<data.act_info[4].act_rows[2].act_rows.length;j++){%>
+			
+		<li>
+			<a href="#">
+				<i style="background-image: url(<%=data.act_info[4].act_rows[2].act_rows[j].cicons_detail.img%>);"></i>
+				<span><%=data.act_info[4].act_rows[2].act_rows[j].cicons_detail.name%></span></a>
+		</li>
+		<%}%>
+		
+	</ul>
+		<div class="bld_bottom">
+		<%for(var g=0; g<data.act_info[4].act_rows[3].act_rows.length;g++){%>
+			
+		<a href="#" style="background-image:url(<%=data.act_info[4].act_rows[3].act_rows[g].cscene_detail.img%>);">
+			</a>
+		<%}%>
+			
+			
+		</div>
+	</div>
+</script>

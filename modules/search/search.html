@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../css/index.css" />
+		<script>
+			(function(doc, win) {
+				var docEl = doc.documentElement,
+					resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+					recalc = function() {
+						var clientWidth = docEl.clientWidth;
+						if(!clientWidth) return;
+						docEl.style.fontSize = 100 * (clientWidth / 414) + 'px';
+					};
+				if(!doc.addEventListener) return;
+				win.addEventListener(resizeEvt, recalc, false);
+				doc.addEventListener('DOMContentLoaded', recalc, false);
+			})(document, window);
+		</script>
+	</head>
+
+	<body>
+		<div class="search_header">
+			<span class="back-item"></span>
+			<form action="#" method="post" class="search-form">
+				<input type="" name="" id="" value="" placeholder="请输入商品名称" class="search-input" />
+			</form>
+			<span class="search-btn">搜索</span>
+		</div>
+		<div class="sug">
+			<span class="sug-label">热门搜索</span>
+			<ul class="sug-list sug-list-hot cf">
+				<li class="sug-item tap-action">大闸蟹</li>
+				<li class="sug-item tap-action">大闸蟹</li>
+				<li class="sug-item tap-action">闸蟹</li>
+				<li class="sug-item tap-action">大闸蟹</li>
+				<li class="sug-item tap-action">大闸蟹</li>
+				<li class="sug-item tap-action">大闸蟹</li>
+				<li class="sug-item tap-action">大闸蟹</li>
+				<li class="sug-item tap-action">大闸蟹</li>
+				<li class="sug-item tap-action">大闸蟹</li>
+				<li class="sug-item tap-action">大闸蟹</li>
+				
+			</ul>
+		</div>
+
+	</body>
+
+</html>

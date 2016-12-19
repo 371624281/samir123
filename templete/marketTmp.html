@@ -1,0 +1,62 @@
+<script type="text/html" id="marketTmp">
+	
+
+<ul class="shop_type">
+		<%for(var i=0 ;i<data.categories.length;i++){%>
+			<%if(data.categories[i].flag==""){%>
+					<li class="sty_list" id=""><%=data.categories[i].name%></li>
+			<%}else{%>
+					<li class="sty_list" style="background-image:url(<%=data.categories[i].flag%>)"><%=data.categories[i].name%></li>
+				<%}%>
+			<%}%>
+
+	</ul>
+
+
+</script>
+
+
+<script type="text/html" id="marketTmp2">
+	
+	<div class="shop_top">
+		<div class="all_type sj">
+			全部分类
+		</div>
+		<div class="all_sort sj line">
+			综合排序
+		</div>
+
+	</div>
+	<ul class="shop_list">
+		<li>
+			
+			<%for(var a = 0; a<data.length;a++){%>
+				<figure>
+					<img class="lazy" data-original=<%=data[a].img%> />
+	
+					<figcaption>
+						<span class="add_food"></span>
+						<span class="foot_count1">1</span>
+						<span class="sub_food"></span>
+	
+						<p class="food_name"><%=data[a].name%></p>
+						<div class="biaoqian">
+							<span class="jx_food">精选</span>
+							<span class="jx_food mz_food">买一赠一</span>
+						</div>
+						<p class="foot_count"><%=data[a].specifics%></p>
+						<p class="food_price">
+							<span class="price-yuan">¥</span> <%=data[a].partner_price%>
+							<span class="price-yuan sub_price ">¥ <%=data[a].market_price%></span>
+						</p>
+				</figcaption>
+			</figure>
+				
+			<%}%>
+			
+
+		</li>
+	</ul>
+
+
+</script>
