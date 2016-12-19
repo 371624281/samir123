@@ -1,7 +1,7 @@
 <?php
 require_once "jssdk.php";
 // appId  和 秘钥
-$jssdk = new JSSDK("wx6a53808c16c3eed1", "d0856f79bb67d68af4139cc2878b2e46");
+$jssdk = new JSSDK("wx30ae26d25279c276", "d0856f79bb67d68af4139cc2878b2e46");
 $signPackage = $jssdk->GetSignPackage();
 ?>
 <!DOCTYPE html>
