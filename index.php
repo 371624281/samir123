@@ -139,7 +139,7 @@ $signPackage = $jssdk->GetSignPackage();
         'openCard'
         ]
   });
-  var latitude=0,
+  var latitude=0
   		,longitude=0;
   function getLocation(){
   wx.getLocation({
