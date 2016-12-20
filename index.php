@@ -149,6 +149,7 @@ $signPackage = $jssdk->GetSignPackage();
         var speed = res.speed; // 速度，以米/每秒计
         var accuracy = res.accuracy; // 位置精度
     }
+    alter("经纬度"+longitude+','+latitude)
 });
   }
 getLocation()
