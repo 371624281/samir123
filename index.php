@@ -47,7 +47,7 @@ $signPackage = $jssdk->GetSignPackage();
 			<header>
 				<div class="header_content">
 
-					<span>物美超市(天园鑫荣店) 二楼育之同创13教室</span>
+					<span onclick="getLocation()">物美超市(天园鑫荣店) 二楼育之同创13教室</span >
 				</div>
 				<div class="search_wap">
 					<div class="center_search">
@@ -152,7 +152,6 @@ $signPackage = $jssdk->GetSignPackage();
     }
 });
   }
-getLocation()
 	</script>
 
 </html>
