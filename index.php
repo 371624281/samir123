@@ -2,7 +2,7 @@
 require_once "jssdk.php";
 // appId  和 秘钥
 $jssdk = new JSSDK("wx30ae26d25279c276", "d0856f79bb67d68af4139cc2878b2e46");
-$signPackage = $jssdk->GetSignPackage();
+$signPackage = $jssdk -> GetSignPackage();
 ?>
 <!DOCTYPE html>
 <html>
@@ -14,20 +14,18 @@ $signPackage = $jssdk->GetSignPackage();
 		<link rel="stylesheet" type="text/css" href="css/index.css" />
 		<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 		<script src="js/require.js" data-main='app.js' type="text/javascript" charset="utf-8"></script>
-		<script>
-			(function(doc, win) {
-				var docEl = doc.documentElement,
-					resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
-					recalc = function() {
-						var clientWidth = docEl.clientWidth;
-						if(!clientWidth) return;
-						docEl.style.fontSize = 100 * (clientWidth / 414) + 'px';
-					};
-				if(!doc.addEventListener) return;
-				win.addEventListener(resizeEvt, recalc, false);
-				doc.addEventListener('DOMContentLoaded', recalc, false);
-			})(document, window);
-		</script>
+		<script>(function(doc, win) {
+	var docEl = doc.documentElement,
+		resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+		recalc = function() {
+			var clientWidth = docEl.clientWidth;
+			if(!clientWidth) return;
+			docEl.style.fontSize = 100 * (clientWidth / 414) + 'px';
+		};
+	if(!doc.addEventListener) return;
+	win.addEventListener(resizeEvt, recalc, false);
+	doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);</script>
 
 	</head>
 
@@ -35,8 +33,7 @@ $signPackage = $jssdk->GetSignPackage();
 		<div class="bootstrap">
 			<div class="logding">
 				<div class="gps_wap">
-					<div class="gps">
-					</div>
+					<div class="gps"></div>
 					<span>定位中</span>
 				</div>
 			</div>
@@ -51,94 +48,108 @@ $signPackage = $jssdk->GetSignPackage();
 				</div>
 				<div class="search_wap">
 					<div class="center_search">
-						<div class="search">
-						</div>
+						<div class="search"></div>
 						<span>搜索</span>
 					</div>
 				</div>
 			</header>
 		</div>
-		
-	<div class="main">
-		<!--page1-->
-		<div class="index_main" id="index"></div>
-		<!--page2-->
-		<div class="sgchaoshi" id="market"></div>
-		<!--page3-->
+
+		<div class="main">
+			<!--page1-->
+			<div class="index_main" id="index"></div>
+			<!--page2-->
+			<div class="sgchaoshi" id="market"></div>
+			<!--page3-->
 			<div class="shoppingCart" id="order"></div>
 			<!--page4-->
-				<div class="my_shopping" id="mine"></div>
-	</div>
+			<div class="my_shopping" id="mine"></div>
+		</div>
 
-
-
-<!--footer-->
+		<!--footer-->
 		<div class="footer">
 			<a href="#home" id="sy">
 				<i class="sy sy-1"></i>
-				<p>首页</p>
+				<p>
+					首页
+				</p>
 			</a>
 			<a href="#market" id="cs">
 				<i class="cs"></i>
-				<p>闪送超市</p>
+				<p>
+					闪送超市
+				</p>
 			</a>
 			<a href="#order" id="gwc">
 				<span id="order_count">1</span>
 				<i class="gwc"></i>
-				<p>购物车</p>
+				<p>
+					购物车
+				</p>
 			</a>
 			<a href="#mine" id="my">
 				<i class="my"></i>
-				<p>我的</p>
+				<p>
+					我的
+				</p>
 			</a>
 		</div>
 		<div id="moban">
-			
+
 		</div>
 	</body>
-	<script type="text/javascript">
-		wx.config({
-    debug: true,
-    appId: '<?php echo $signPackage["appId"];?>',
-    timestamp: <?php echo $signPackage["timestamp"];?>,
-    nonceStr: '<?php echo $signPackage["nonceStr"];?>',
-    signature: '<?php echo $signPackage["signature"];?>',
-     jsApiList: [
-     'checkJsApi',
-        'onMenuShareWeibo',
-        'onMenuShareQZone',
-        'hideMenuItems',
-        'showMenuItems',
-        'hideAllNonBaseMenuItem',
-        'showAllNonBaseMenuItem',
-        'translateVoice',
-        'startRecord',
-        'stopRecord',
-        'onVoiceRecordEnd',
-        'playVoice',
-        'onVoicePlayEnd',
-        'pauseVoice',
-        'stopVoice',
-        'uploadVoice',
-        'downloadVoice',
-        'chooseImage',
-        'previewImage',
-        'uploadImage',
-        'downloadImage',
-        'getNetworkType',
-        'openLocation',
-        'getLocation',
-        'hideOptionMenu',
-        'showOptionMenu',
-        'closeWindow',
-        'scanQRCode',
-        'chooseWXPay',
-        'openProductSpecificView',
-        'addCard',
-        'chooseCard',
-        'openCard'
-        ]
-  });
-	</script>
+	<script type="text/javascript">wx.config({
+			debug: true,
+			appId: '<?php echo $signPackage["appId"]; ?>',
+timestamp:<?php echo $signPackage["timestamp"]; ?>,
+nonceStr: '<?php echo $signPackage["nonceStr"]; ?>',
+signature: '<?php echo $signPackage["signature"]; ?>',
+jsApiList: [
+'checkJsApi',
+'onMenuShareWeibo',
+'onMenuShareQZone',
+'hideMenuItems',
+'showMenuItems',
+'hideAllNonBaseMenuItem',
+'showAllNonBaseMenuItem',
+'translateVoice',
+'startRecord',
+'stopRecord',
+'onVoiceRecordEnd',
+'playVoice',
+'onVoicePlayEnd',
+'pauseVoice',
+'stopVoice',
+'uploadVoice',
+'downloadVoice',
+'chooseImage',
+'previewImage',
+'uploadImage',
+'downloadImage',
+'getNetworkType',
+'openLocation',
+'getLocation',
+'hideOptionMenu',
+'showOptionMenu',
+'closeWindow',
+'scanQRCode',
+'chooseWXPay',
+'openProductSpecificView',
+'addCard',
+'chooseCard',
+'openCard'
+]
+});
+wx.getLocation({
+	type: 'wgs84', // 默认为wgs84的gps坐标，如果要返回直接给openLocation用的火星坐标，可传入'gcj02'
+	success: function(res) {
+		var latitude = res.latitude; // 纬度，浮点数，范围为90 ~ -90
+		var longitude = res.longitude; // 经度，浮点数，范围为180 ~ -180。
+		var speed = res.speed; // 速度，以米/每秒计
+		var accuracy = res.accuracy; // 位置精度
+	}
+});
+wx.getLocation();
+</script>
 
 </html>
